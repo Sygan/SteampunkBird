@@ -1,0 +1,5 @@
+All of the assets and code included in this project - unless otherwise specified - were created by Matthew Blank (Mateusz Pusty) and are licensed under the following license:
+
+Steampunk Bird Educational Project © 2024 by Matthew Blank (Mateusz Pusty) is licensed under CC BY 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+
+The audio effects were created using jsfxr available at - https://sfxr.me/
