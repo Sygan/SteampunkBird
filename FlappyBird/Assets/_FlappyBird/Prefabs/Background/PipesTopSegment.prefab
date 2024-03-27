@@ -102,11 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   spawnPositionX: 9.43
-  despawnPositionX: -9.43
+  despawnPositionX: -9.4
   randomizeTheYPosition: 0
   yMin: 0
   yMax: 0
   destroyWhenReachedDespawnPoint: 0
+  alwaysMove: 0
 --- !u!61 &912555916550574445
 BoxCollider2D:
   m_ObjectHideFlags: 0

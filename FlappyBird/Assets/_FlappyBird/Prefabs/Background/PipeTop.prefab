@@ -105,6 +105,7 @@ MonoBehaviour:
   yMin: 0
   yMax: 0
   destroyWhenReachedDespawnPoint: 1
+  alwaysMove: 0
 --- !u!61 &8507421256616941990
 BoxCollider2D:
   m_ObjectHideFlags: 0
