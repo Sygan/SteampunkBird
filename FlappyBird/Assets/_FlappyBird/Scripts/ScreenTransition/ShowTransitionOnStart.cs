@@ -2,6 +2,7 @@ using UnityEngine;
 
 /// <summary>
 /// This component will simply start the screen transition with predefined values.
+/// We use this component to show the Fade Out From Black when the level loads.
 /// </summary>
 public class ShowTransitionOnStart : MonoBehaviour
 {

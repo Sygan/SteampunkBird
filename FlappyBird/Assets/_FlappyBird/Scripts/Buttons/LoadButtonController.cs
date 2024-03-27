@@ -32,6 +32,7 @@ public class LoadButtonController : MonoBehaviour
         screenTransition.ShowTransition(Color.clear, Color.black, false,  OnTransitionFinished);
     }
 
+    // We will invoke this method when the screen transition finishes.
     private void OnTransitionFinished()
     {
         //We can use this method to load a scene by name.

@@ -21,11 +21,26 @@ public class CameraRectController : MonoBehaviour
     /// The reference to the Camera component.
     /// </summary>
     public Camera gameCamera;
+
+    /// <summary>
+    /// This is the last resolution we've set our camera value for.
+    /// It allows us to check if the resolution changed during the game
+    /// e.g. player entered/exited fullscreen.
+    /// </summary>
+    private Vector2 _lastResolution;
     
     private void Start()
     {
         //We will do this once when the game starts for good measure
         SetCameraRectForSpecifiedAspectRatio();
+    }
+
+    private void Update()
+    {
+        //We can check if the resolution has changed, and only if it changed we will set the Camera Rect again. 
+        //Because of the floating-point comparison errors we need to check if we're approximately those values instead of using != or ==.
+        if(!Mathf.Approximately(_lastResolution.x, Screen.width) || !Mathf.Approximately(_lastResolution.y, Screen.height))
+            SetCameraRectForSpecifiedAspectRatio();
     }
 
     public void SetCameraRectForSpecifiedAspectRatio()
@@ -56,6 +71,14 @@ public class CameraRectController : MonoBehaviour
             return;
         }
         
+        //We can set up something called Rect - which is a description of a rectangle that has width, height, x and y position - and define it for our camera.
+        //The width and height are values that describe how big percentage of the game window (be it Game View in Editor, an actual window in packaged project or a 
+        //resolution of our monitor when the game is in fullscreen). The x and y work the same in terms of position of it. 
+        
+        //We can define that our camera should occupy some part of the actual game window instead of taking up all available space.
+        //This can be used if you want to have a split-screen for multiple player with many cameras or - in our case - limit our game to a 9:16 aspect ratio 
+        //no matter the size of the window the player is running the game on.
+        
         //If the scaledRectHeight is lesser than 1.0 this means that we should add the letterboxes to the top and bottom of the screen
         //Otherwise if it's greater than 1.0, we need to add pillarboxes to the sides of the screen.
         if (scaledRectHeight < 1.0f)
@@ -82,5 +105,8 @@ public class CameraRectController : MonoBehaviour
 
         //This will actually change the values in the Camera component.
         gameCamera.rect = cameraRect;
+
+        //Save the last resolution as current 
+        _lastResolution = currentResolution;
     }
 }

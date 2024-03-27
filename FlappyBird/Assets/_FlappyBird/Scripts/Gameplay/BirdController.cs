@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script is responsible for providing the main logic for the Bird Game Object
@@ -8,7 +6,11 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class BirdController : MonoBehaviour
 {
+    
+    //### These variables will show in inspector ###
+    
     //When you declare a variable with a public modifier it will be visible in the Inspector window.
+    
     
     // This variable defines the force that will be applied to the bird when the PLayer presses space.
     public float jumpForce;
@@ -37,6 +39,8 @@ public class BirdController : MonoBehaviour
     // This is the variable that keep the current score for the Player.
     public int points;
 
+    //### These variables will be available to use without a need of having a reference to an object, but will not show in Inspector window ###
+
     // This is a different type of variable than the ones above because it is static. It means that it lives not on the actual object of the Bird in the scene
     // but rather it is accessible without the need of any object existing. 
     public static bool IsDead;
@@ -44,9 +48,14 @@ public class BirdController : MonoBehaviour
     // This is a so called flag that will check if the game was already started i.e. we've pressed the Jump button for the first time.
     public static bool HasStarted;
 
+    //### These are values private to our object. We can preview their state in Inspector window in Debug View. ###
+    
     // We will save the initial gravity scale so we can restore it when the game starts.
     private float initialGravityScale;
     
+    /// <summary>
+    /// The Start() method is invoked once per object before the first Update()
+    /// </summary>
     private void Start()
     {
         //We also need to set the IsDead and HasStarted to false here, because as this variable does not need any actual object to be set, it will keep its value when we restart the level.
@@ -128,11 +137,16 @@ public class BirdController : MonoBehaviour
 
     }
 
+    // This method will return the current highscore value.
     public int GetCurrentHighscore()
     {
+        //The PlayerPrefs are an easy and quick way of saving some data for our game.
+        //They are not as flexible or fast as creating an actual save file, but for small values they are just fine.
+        //This value is stored in (on Windows) in system Registry. For the web builds it is stored as a cookie. 
         return PlayerPrefs.GetInt("Highscore");
     }
 
+    // This method will try to set the current highscore value if current score is greater than it.
     private void TryToSetCurrentHighscore()
     {
         //We want to check if the current amount of points is greater than the highscore.

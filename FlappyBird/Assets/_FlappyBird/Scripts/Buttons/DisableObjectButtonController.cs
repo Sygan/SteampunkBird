@@ -19,6 +19,7 @@ public class DisableObjectButtonController : MonoBehaviour
         Invoke("DisableObject", 0.5f);
     }
 
+    // This method simply disables the object.
     public void DisableObject()
     {
         //Sets the specified Game Object active state to false.
