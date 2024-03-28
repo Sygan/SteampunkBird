@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.93
+      value: -8.13
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -198,6 +198,14 @@ PrefabInstance:
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: spawnPositionX
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: despawnPositionX
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7398786975743218521, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_Name
@@ -327,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesTopSegment_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762703169073337046, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.93
@@ -384,13 +396,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_Sky_2
       objectReference: {fileID: 0}
+    - target: {fileID: 517337287738530222, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -520,6 +536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesTopSegment_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762703169073337046, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.18
@@ -577,13 +597,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_Sky_0
       objectReference: {fileID: 0}
+    - target: {fileID: 517337287738530222, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -674,6 +698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6151627189231177765, guid: b112fccb264b7774aade90ecbfdd0442, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -731,6 +759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6151627189231177765, guid: b112fccb264b7774aade90ecbfdd0442, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,6 +779,10 @@ PrefabInstance:
     - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_Name
       value: PipesTopSegment_0 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762703169073337046, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.93
+      value: -8.13
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -840,6 +876,14 @@ PrefabInstance:
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: spawnPositionX
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: despawnPositionX
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7398786975743218521, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_Name
@@ -938,6 +982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6151627189231177765, guid: b112fccb264b7774aade90ecbfdd0442, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -986,13 +1034,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_Sky_1
       objectReference: {fileID: 0}
+    - target: {fileID: 517337287738530222, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 916789841807202336, guid: b76a279e28ab3ae4b95f238f6efc0a2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1106,7 +1158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12829965857656960, guid: c642191f1da17cd40b2901f011a5b79d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.44
+      value: -7.31
       objectReference: {fileID: 0}
     - target: {fileID: 12829965857656960, guid: c642191f1da17cd40b2901f011a5b79d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1144,6 +1196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_City_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5537812916522162704, guid: c642191f1da17cd40b2901f011a5b79d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1161,13 +1217,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_City_0
       objectReference: {fileID: 0}
+    - target: {fileID: 673650310200766681, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5021124545020148297, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 5021124545020148297, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.44
+      value: -7.31
       objectReference: {fileID: 0}
     - target: {fileID: 5021124545020148297, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1258,6 +1318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipes
       objectReference: {fileID: 0}
+    - target: {fileID: 6151627189231177765, guid: b112fccb264b7774aade90ecbfdd0442, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1277,7 +1341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 201070506476925073, guid: 90dd968c221b78f49ade8a6b8cbb456c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.44
+      value: -7.31
       objectReference: {fileID: 0}
     - target: {fileID: 201070506476925073, guid: 90dd968c221b78f49ade8a6b8cbb456c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1315,6 +1379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_City_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5637820395780307457, guid: 90dd968c221b78f49ade8a6b8cbb456c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1334,7 +1402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.93
+      value: -8.13
       objectReference: {fileID: 0}
     - target: {fileID: 2233368766663941551, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1368,6 +1436,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: spawnPositionX
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192279537696493605, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
+      propertyPath: despawnPositionX
+      value: -13
+      objectReference: {fileID: 0}
     - target: {fileID: 7398786975743218521, guid: e0cf7deb5fa45c24e8576f9bab0c24b5, type: 3}
       propertyPath: m_Name
       value: Ground_1
@@ -1388,6 +1464,10 @@ PrefabInstance:
     - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_Name
       value: PipesTopSegment_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399676704554529294, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762703169073337046, guid: a98e515ee91b01f4aa2b72217d6f55e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1689,7 +1769,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4113649098276461045, guid: 22bde4c1e1e91784eb9d160d16803c8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4113649098276461045, guid: 22bde4c1e1e91784eb9d160d16803c8b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1730,6 +1810,10 @@ PrefabInstance:
     - target: {fileID: 5793149661596045003, guid: 22bde4c1e1e91784eb9d160d16803c8b, type: 3}
       propertyPath: m_Name
       value: PipeTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793149661596045003, guid: 22bde4c1e1e91784eb9d160d16803c8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

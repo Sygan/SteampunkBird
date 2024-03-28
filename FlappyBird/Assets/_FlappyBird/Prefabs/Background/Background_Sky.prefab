@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1
-  spawnPositionX: 12
-  despawnPositionX: -11.9
+  spawnPositionX: 11
+  despawnPositionX: -13
   randomizeTheYPosition: 0
   yMin: 0
   yMax: 0

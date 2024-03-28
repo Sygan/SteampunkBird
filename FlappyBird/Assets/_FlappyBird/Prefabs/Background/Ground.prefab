@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2233368766663941551}
   - component: {fileID: 9078692941533300508}
-  - component: {fileID: 8560339519181049251}
   - component: {fileID: 3192279537696493605}
+  - component: {fileID: 591575233126401371}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -86,7 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8560339519181049251
+--- !u!114 &3192279537696493605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398786975743218521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832515e75dc1af042bf165df5dd20bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -4
+  spawnPositionX: 12
+  despawnPositionX: -11.9
+  randomizeTheYPosition: 0
+  yMin: 0
+  yMax: 0
+  destroyWhenReachedDespawnPoint: 0
+  alwaysMove: 0
+--- !u!61 &591575233126401371
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +140,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 4, y: 1.09375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     oldSize: {x: 8, y: 2.1875}
     newSize: {x: 8, y: 2.1875}
     adaptiveTilingThreshold: 0.5
@@ -132,23 +152,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8, y: 2.1875}
   m_EdgeRadius: 0
---- !u!114 &3192279537696493605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398786975743218521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832515e75dc1af042bf165df5dd20bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -3
-  spawnPositionX: 12
-  despawnPositionX: -11.9
-  randomizeTheYPosition: 0
-  yMin: 0
-  yMax: 0
-  destroyWhenReachedDespawnPoint: 0
-  alwaysMove: 0
