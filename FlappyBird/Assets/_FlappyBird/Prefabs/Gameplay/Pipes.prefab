@@ -125,13 +125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832515e75dc1af042bf165df5dd20bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -3
+  speed: -4
   spawnPositionX: 9.43
   despawnPositionX: -9.43
   randomizeTheYPosition: 1
   yMin: -5
   yMax: -1
   destroyWhenReachedDespawnPoint: 0
+  alwaysMove: 0
 --- !u!1001 &2619184799606990551
 PrefabInstance:
   m_ObjectHideFlags: 0

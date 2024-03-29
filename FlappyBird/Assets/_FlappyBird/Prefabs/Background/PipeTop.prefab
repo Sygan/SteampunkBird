@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832515e75dc1af042bf165df5dd20bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -3
+  speed: -4
   spawnPositionX: 0
   despawnPositionX: -12
   randomizeTheYPosition: 0
