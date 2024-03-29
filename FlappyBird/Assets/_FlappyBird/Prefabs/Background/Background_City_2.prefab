@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 673650310200766681, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
       propertyPath: m_Name
-      value: Background_City_2 Variant
+      value: Background_City_2
       objectReference: {fileID: 0}
     - target: {fileID: 5021124545020148297, guid: 2fffc23c0cf963a438cea4d38076b3cd, type: 3}
       propertyPath: m_LocalPosition.x
