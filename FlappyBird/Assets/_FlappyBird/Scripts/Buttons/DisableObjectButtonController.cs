@@ -16,11 +16,11 @@ public class DisableObjectButtonController : MonoBehaviour
         //We can delay execution of a method within the component by using the Invoke method.
         //We can pass the name of this method as a parameter for the function. The second parameters defines the delay after which we want this method 
         //to execute
-        Invoke("DisableObject", 0.5f);
+        Invoke("DisableObject", 0.2f);
     }
 
     // This method simply disables the object.
-    public void DisableObject()
+    private void DisableObject()
     {
         //Sets the specified Game Object active state to false.
         gameObjectToDisable.SetActive(false);

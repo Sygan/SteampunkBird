@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// This script is responsible for providing the main logic for the Bird Game Object
@@ -35,6 +36,9 @@ public class BirdController : MonoBehaviour
 
     // This is the reference to the UI Game Object that holds is the game over screen.
     public GameObject gameOverScreen;
+
+    // This is the reference to the UI Game Object that holds the how to play screen.
+    public GameObject howToPlayScreen;
     
     // This is the variable that keep the current score for the Player.
     public int points;
@@ -72,8 +76,12 @@ public class BirdController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        //We will check if the Bird is dead. If it is, we will stop executing the gameplay code for the Bird
-        if(IsDead)
+        //First, we will check if the Bird is dead. If it is, we will stop executing the gameplay code for the Bird
+        //Second, we also want to check if the timeScale == 0 (i.e. game is paused) as timeScale of 0 will still invoke Update method even though physics/deltaTime is paused.
+        //Thirdly, we want to check IsPointerOverGameObject() - despite its name this method returns true if our mouse cursor is on top of an UI object.
+        //This will keep the bird from jumping in the same moment we're clicking on the Pause Button.
+        //Yes, this method name is very badly named
+        if(IsDead || Time.timeScale == 0 || EventSystem.current.IsPointerOverGameObject())
             return;
         
         //We can check if the Player invoked the "Jump" button.
@@ -84,8 +92,12 @@ public class BirdController : MonoBehaviour
             //If this is our very first Jump, let's start the game
             if (!HasStarted)
             {
+                //We will then, set the flag HasStarted to true - as the game has started.
                 HasStarted = true;
 
+                //We will also disable the How To Play Screen.
+                howToPlayScreen.SetActive(false);
+                
                 //Restore the gravity scale so the bird can fall down now.
                 rigidbody.gravityScale = initialGravityScale;
             }
