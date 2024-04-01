@@ -265,6 +265,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6463425673546123045}
     m_Modifications:
+    - target: {fileID: 1525249190329000407, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595277125759183445, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
+      propertyPath: MaxDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595277125759183445, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595277125759183445, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4588551935031072650, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
       propertyPath: m_Name
       value: PauseButton
@@ -349,7 +365,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1595277125759183445, guid: 4f840bc045a961b449dec8775b8561ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -582,6 +599,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6463425673546123045}
     m_Modifications:
+    - target: {fileID: 556773509313768304, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 843119952329115608, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -718,6 +739,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -485
       objectReference: {fileID: 0}
+    - target: {fileID: 4313344074674540657, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4668318822165134704, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -733,6 +758,30 @@ PrefabInstance:
     - target: {fileID: 4668318822165134704, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160808886684434223, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: MaxDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160808886684434223, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160808886684434223, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720310423736556725, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: MaxDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720310423736556725, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720310423736556725, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5847636693875196961, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
       propertyPath: m_AnchorMax.y
@@ -790,7 +839,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5160808886684434223, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
+    - {fileID: 5720310423736556725, guid: c72da32a67d0e7b42945f1bed2c5d316, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

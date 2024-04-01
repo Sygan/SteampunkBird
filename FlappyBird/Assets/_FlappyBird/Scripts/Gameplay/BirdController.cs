@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class BirdController : MonoBehaviour
 {
-    
     //### These variables will show in inspector ###
     
     //When you declare a variable with a public modifier it will be visible in the Inspector window.
