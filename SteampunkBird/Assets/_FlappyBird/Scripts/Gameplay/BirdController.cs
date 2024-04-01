@@ -18,6 +18,13 @@ public class BirdController : MonoBehaviour
     // This will limit the max velocity of the bird when going up.
     public float maxVelocity;
 
+    // These values define the max/min Z rotation of the birds nose.
+    public float birdNoseUpZRotation;
+    public float birdNoseDownZRotation;
+    
+    // This value defines how fast should we rotate our birds nose.
+    public float birdNoseRotationChangeSpeed;
+    
     // This allows us to set the reference to the Rigidbody2D component which is responsible for handling 2D Physics.
     // We can use it's methods to apply force when the bird jumps.  
     public Rigidbody2D rigidbody;
@@ -56,6 +63,15 @@ public class BirdController : MonoBehaviour
     // We will save the initial gravity scale so we can restore it when the game starts.
     private float initialGravityScale;
     
+    // Internally the rotation is handled by using Quaternions, a mathematical structure that allows us to do rotations without experiencing gimbal lock. 
+    // This means that we need to either do our rotation maths using Quaternions or convert Euler values into the Quaternions. We will do the latter here.
+    private Quaternion birdNoseUpRotation;
+    private Quaternion birdNoseDownRotation;
+
+    // This value stores how much should our birds nose be pointed up or down
+    // Within values of 0 - 1 where 0 is maximally down and 1 is maximally up.
+    private float currentNoseRotationAmount;
+    
     /// <summary>
     /// The Start() method is invoked once per object before the first Update()
     /// </summary>
@@ -68,6 +84,11 @@ public class BirdController : MonoBehaviour
         //We will set the gravityScale to 0 and save it's initial value so the bird doesn't fall at the start of the game. 
         initialGravityScale = rigidbody.gravityScale;
         rigidbody.gravityScale = 0;
+
+        //Here we will convert the euler angles into quaternion values to store our bird rotation.
+        //We only need to modify the Z-Axis as we're working in 2D and the x/y are not needed in our case.
+        birdNoseUpRotation = Quaternion.Euler(0, 0, birdNoseUpZRotation);
+        birdNoseDownRotation = Quaternion.Euler(0, 0, birdNoseDownZRotation);
     }
 
     /// <summary>
@@ -119,6 +140,12 @@ public class BirdController : MonoBehaviour
         //And we will limit the velocity to a predefined max velocity so the bird will never start going to fast if player presses multiple jumps
         if (rigidbody.velocity.y > maxVelocity)
             rigidbody.velocity = new Vector2(0, maxVelocity);
+
+        //Lastly we will set the birds nose rotation that depends on current bird velocity.
+        //But only if we've made the first jump, so it's pointing forward before we start the game.
+        if(HasStarted)
+            SetTheDirectionTheBirdIsPointing();
+
     }
 
     /// <summary>
@@ -189,5 +216,32 @@ public class BirdController : MonoBehaviour
             //This code will play the pointScoreSound using the values set up in our AudioSource component.
             audioSource.PlayOneShot(pointScoreSound);
         }
+    }
+
+    /// <summary>
+    /// This method will point the birds nose up if he's moving up and down when he's moving down. 
+    /// </summary>
+    private void SetTheDirectionTheBirdIsPointing()
+    {
+        //We will either increase or decrease the Z rotation amount for our bird's nose 
+        if (rigidbody.velocity.y > 0)
+        {       
+            //If the bird is moving up - it's velocity in Y axis is greater than 0 - increase the value so it will point more up.
+            currentNoseRotationAmount += birdNoseRotationChangeSpeed * Time.deltaTime;
+        }
+        else if (rigidbody.velocity.y < 0)
+        {        
+            //If the bird is moving down - it's velocity in Y axis is less than 0 - decrease the value so it will point more down.
+            currentNoseRotationAmount -= birdNoseRotationChangeSpeed * Time.deltaTime;
+        }
+
+        //This method will clamp the value we're receiving in between 0 and 1.
+        //Again 0 is for maximum down rotation and 1 is for maximum up rotation.
+        currentNoseRotationAmount = Mathf.Clamp01(currentNoseRotationAmount);
+        
+        //Lerp between nose down rotation and nose up rotation.
+        //This will take our currentNoseRotationAmount and set it in between nos down and up rotation depending on it. 
+        //i.e. if it was currentNoseRotationAmount was 0.5f it would be exactly in the middle in between birdNoseDownRotation and birdNoseUpRotation. 
+        transform.rotation = Quaternion.Lerp(birdNoseDownRotation, birdNoseUpRotation, currentNoseRotationAmount);
     }
 }

@@ -77,6 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 20
   maxVelocity: 11
+  birdNoseUpZRotation: 20
+  birdNoseDownZRotation: -30
+  birdNoseRotationChangeSpeed: 5
   rigidbody: {fileID: 2955277997162919556}
   animator: {fileID: 3120284298232186291}
   audioSource: {fileID: 7134836000914475199}
@@ -84,6 +87,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: e6910d31206c42f499ddf7957a22c2be, type: 3}
   pointScoreSound: {fileID: 8300000, guid: ab06d5d28ff18444d9e4fe9955c19e26, type: 3}
   gameOverScreen: {fileID: 0}
+  howToPlayScreen: {fileID: 0}
   points: 0
 --- !u!95 &3120284298232186291
 Animator:
