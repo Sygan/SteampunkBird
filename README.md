@@ -1,8 +1,10 @@
 # Steampunk Bird
 
+![](https://img.itch.zone/aW1nLzE1NjA1NjA3LnBuZw==/315x250%23c/zhoydV.png)
+
 Meet John. John is a busy bird that has a lot of work to do. But he's going to be late! He decided to take a shortcut through the industrial district. He did not anticipate that it would be riddled with scorching hot steam pipes. 
 
-Your objectives:
+**Your objectives:**
 
 - Help him fly through the pipes!
 - Get the highest score possible as you do so!
@@ -11,6 +13,10 @@ Your objectives:
 You can play this game on my itch.io page.
 
 [<kbd> <br> Play on itch.io <br> </kbd>][GameLink]
+
+## Screenshots
+
+<img src="https://img.itch.zone/aW1hZ2UvMjYwOTk2Mi8xNTYwNTQxNS5wbmc=/347x500/dGieBY.png" alt="drawing" width="150"/> <img src="https://img.itch.zone/aW1hZ2UvMjYwOTk2Mi8xNTYwNTQxNy5wbmc=/original/E2BZ0c.png" alt="drawing" width="150"/>
 
 ## About
 
